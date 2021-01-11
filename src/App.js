@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import DocumentEditor from './components/DocumentEditor'
+import './App.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  handleEditorChange = (e) => {
+    console.log(e.target)
+    console.log(
+      'Content was updated:',
+      e.target.getContent()
+    );
+  }
+
+  render() {
+    return (
+      <div className='edit-box'>
+        <div>
+          <h1>Chapter 1</h1>
+        </div>
+        <div>
+          <DocumentEditor />
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
