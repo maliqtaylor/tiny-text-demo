@@ -20,8 +20,8 @@ class DocumentEditor extends Component {
   render() {
     return (
       <Editor
-        apiKey='f9a3a5diqq6tdf5nkmcqqp4byzf722meh65tsj8jsf5hme9g'
         value={this.state.editorContent}
+        disabled={true}
         init={{
           readonly: 1,
           height: 750,
