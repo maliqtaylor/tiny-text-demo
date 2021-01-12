@@ -23,18 +23,22 @@ class DocumentEditor extends Component {
         apiKey='f9a3a5diqq6tdf5nkmcqqp4byzf722meh65tsj8jsf5hme9g'
         value={this.state.editorContent}
         init={{
-          height: 700,
+          readonly: 1,
+          height: 750,
+          resize: false,
+          readonly: true,
           menubar: false,
           plugins: [
             'advlist autolink lists link image charmap print preview anchor',
             'searchreplace visualblocks code fullscreen',
-            'insertdatetime media table paste code help wordcount'
+            'insertdatetime media table paste code help wordcount',
           ],
           toolbar:
-            'undo redo | formatselect | bold italic backcolor | \
-             alignleft aligncenter alignright alignjustify | \
-             bullist numlist outdent indent |'
+            'undo redo | formatselect | bold italic backcolor |' +
+            'alignleft aligncenter alignright alignjustify |' +
+            'bullist numlist outdent indent |'
         }}
+        setmode
         onEditorChange={this.handleEditorChange}
       />
     );

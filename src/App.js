@@ -1,5 +1,6 @@
 import React from 'react';
 import DocumentEditor from './components/DocumentEditor'
+import { Container} from 'semantic-ui-react'
 import './App.css'
 
 class App extends React.Component {
@@ -13,14 +14,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className='edit-box'>
-        <div>
-          <h1>Chapter 1</h1>
-        </div>
-        <div>
-          <DocumentEditor />
-        </div>
-      </div>
+      <Container text>
+        <DocumentEditor />
+      </Container>
     );
   }
 }
